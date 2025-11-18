@@ -1,0 +1,119 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #235daf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    background-color: rgb(114, 141, 171);
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+nav a, nav button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: white;
+    background: #5555aa;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+nav button {
+    background: #6c5ce7;
+}
+
+.palette-section {
+    display: flex;
+    flex-wrap: wrap;           
+    gap: 15px;
+    justify-content: center;   
+    
+}
+
+/* Box */
+.box {
+    position: relative;
+    flex: 1 1 150px;           
+    max-width: 200px;          
+    padding: 20px 10px 10px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 120px;
+    color: #333;
+}
+
+.btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.8);
+    font-weight: bold;
+}
+
+.text {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .box {
+        flex: 1 1 140px;
+        height: 110px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a, nav button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .box {
+        flex: 1 1 120px;
+        height: 100px;
+    }
+}
